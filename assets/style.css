@@ -1,0 +1,133 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* background & Body */
+html,
+body,
+.wrapper {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #0a3c6d;
+}
+
+.wrapper {
+  padding-top: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* header section*/
+header {
+  text-align: center;
+  padding: 20px;
+  padding-top: 0px;
+  color: hsl(0, 0%, 100%);
+  font-size: 24px;
+}
+/* card info section*/
+.card {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(205, 100%, 2%);
+  border-radius: 5px;
+  border-width: 1px;
+  font-size: 22px;
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 10px 30px;
+  text-align: center;
+}
+
+.quiz-header::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #000005;
+  height: 3px;
+}
+
+.quiz-body {
+  min-height: 100px;
+}
+
+.quiz-footer {
+  text-align: center;
+}
+
+.quiz-footer::before {
+  content: " ";
+  display: block;
+  width: 100%;
+
+  height: 3px;
+}
+
+.quiz-footer::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* submit answer button*/
+.btn {
+  border: none;
+  background-color: rgb(24, 12, 133);
+  border-radius: 20px;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  text-align: center;
+  cursor: pointer;
+}
+
+button[disabled] {
+  cursor: default;
+  background: #c0c7cf;
+}
+
+.float-right {
+  float: right;
+}
+/*answer area*/
+#answer {
+  appearance: none;
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 85px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #000005;
+  border-radius: 4px;
+  resize: none;
+  overflow: hidden;
+}
+
+@media (max-width: 690px) {
+  .btn {
+    font-size: 1rem;
+    margin: 14px 0px 0px 0px;
+    padding: 10px 14px;
+  }
+
+  #answer {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .btn {
+    font-size: 0.8rem;
+  }
+}
