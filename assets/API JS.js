@@ -1,7 +1,61 @@
-// Submit element
 var submitBtn = document.querySelector("#submit");
+var quizHeader = document.getElementById("quiz-header");
 
-// Write password to the #password input
+// set of 4 questions with multiple choice 
+function populateQuiz(questions, submitButton, startButton, quizContainer, resultsContainer){
+
+
+var questions = [
+  {
+    question: "What are Curly Braces",
+    answers: {
+      1: "{}",
+      2: "[]",
+      3: "<>",
+    },
+    correctAnswer: "1",
+  },
+  {
+    question: "What is a Boolean?",
+    answers: {
+      1: "A value that expresses only truth",
+      2: "A value that expresses only false",
+      3: "A value that expresses a truth or false value",
+    },
+    correctAnswer: "3",
+  },
+
+{
+  question: "What is BLANK??",
+  answers: {
+    1: "Dont you worry about BLANK",
+    2: "Let me worry about BLANK"",
+    3: "Blank STARE",
+  },
+  correctAnswer: "2",
+},
+
+{
+question: "What is life?",
+answers: {
+  1: "vast nothingness",
+  2: "its all about the journey",
+  3: "Blank STARE some more "
+},
+correctAnswer: "2",
+}
+
+];
+}
+// for (var i = 0; i < questions.length; i++) {
+//   console.log(questions[i]);
+// }
+
+function showQuestion() {
+  quizHeader.textContent = "What are Curly Braces?";
+  // start the timer
+  // populate the first question
+}
 function writePassword() {
   var password = submitPassword();
   var passwordText = document.querySelector("#password");
@@ -9,10 +63,10 @@ function writePassword() {
   passwordText.value = password;
 }
 
-const quizConatainer = document.getElementsById("answer");
-const resultsContainer = ducument.getElementsById("results");
+//const quizContainer = document.getElementById("answer");
+
+//const resultsContainer = document.getElementById("results");
 // event listener for submit answer button
-submitBtn.addEventListener("click", showResult);
 
 //timer function
 function startTimer(duration, display) {
@@ -31,11 +85,11 @@ function startTimer(duration, display) {
     }
   }, 100);
 }
-window.onload = function () {
-  var threeMinutes = 60 * 3,
-    display = document.querySelector("#time");
-  startTimer(threeMinutes, display);
-};
+// window.onload = function () {
+//   var threeMinutes = 60 * 3,
+//     display = document.querySelector("#time");
+//   startTimer(threeMinutes, display);
+// };
 //<span id="timer"></span>;
 
 var minutes = Math.floor;
@@ -81,3 +135,5 @@ function Password() {
   console.log(password);
   return password;
 }
+
+submitBtn.addEventListener("click", showQuestion);

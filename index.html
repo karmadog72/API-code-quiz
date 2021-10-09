@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- boiler plates -->
 
 <head>
     <meta charset="UTF-8" />
@@ -8,23 +9,18 @@
     <title>Timed Coding Quiz</title>
     <link rel="stylesheet" href="./assets/style.css" />
 </head>
+<!-- the main question section -->
 
 <body>
     <div class="wrapper">
         <header>
             <h1>Timed Coding Quiz</h1>
         </header>
-        <div class="card">
-            <div class="quiz-header">
-                <h2>What are curly braces? <br>Type the correct symbol </h2>
-            </div>
-            <div class="quiz-body">
-                <textarea id="answer" name="answer" aria-label="Submit answer" rows="2" cols="4"></textarea>
-            </div>
-            <button id="submit" class="btn">SUBMIT ANSWER</button>
-            <div class="quiz-footer"></div>
 
-        </div>
+        <div class="quiz-footer"></div>
+        <button id="submit" class="btn">Start</button>
+        <button id="submit" class="btn">Submit</button>
+        <div id="result"></div>
     </div>
     <script src="./assets/API JS.js"></script>
 </body>
