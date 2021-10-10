@@ -12,17 +12,33 @@
 <!-- the main question section -->
 
 <body>
-    <div class="wrapper">
+    <div class="container">
         <header>
             <h1>Timed Coding Quiz</h1>
         </header>
-
-        <div class="quiz-footer"></div>
-        <button id="submit" class="btn">Start</button>
+        <h2 id="timer"></h2>
+        <div class="quiz"></div>
+        <button id="start" class="btn">Start</button>
         <button id="submit" class="btn">Submit</button>
-        <div id="result"></div>
+        <div id="results"> </div>
+        <div id="questions"> </div>
+        <div id="choices"></div>
+        <div id="highscores"></div>
+        <label>
+            <input type="radio" name="question${question}" value="${number}">
+
+        </label>
     </div>
-    <script src="./assets/API JS.js"></script>
+
+    </label>
+    </div>
+    <ul>
+        <li>
+            placeholder text
+        </li>
+    </ul>
+    <script src="./assets/API.js">
+    </script>
 </body>
 
 </html>
