@@ -12,31 +12,82 @@
 <!-- the main question section -->
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Timed Coding Quiz</h1>
-        </header>
-        <h2 id="timer"></h2>
-        <div class="quiz"></div>
+    <header>
+        <h1>Timed Coding Quiz</h1>
+    </header>
+    <h2 id="timer"></h2>
+    <div class="quizContainer">
+        <div>
+            <ul>
+                <p>"What are Curly Braces"</p>
+                <div>
+                    <ul>
+                        <input type="radio" name="answers${answers}" value="${number}">1: "{ }"
+                        <input type="radio" name="answers${answers}" value="${number}">2: "[ ]"
+                        <input type="radio" name="answers${answers}" value="${number}">3: "| |"
+
+                    </ul>
+                </div>
+            </ul>
+        </div>
+
+        <div>
+            <ul>
+                <p>"What is a Boolean?"</p>
+                <div>
+                    <ul>
+                        <input type="radio" name="answers${answers}" value="${number}">1: "A value that expresses only
+                        <input type="radio" name="answers${answers}" value="${number}">2: "A value that expresses only
+                        false"
+                        <input type="radio" name="answers${answers}" value="${number}">3: "A value that expresses truth
+                        or false value"
+
+                    </ul>
+                </div>
+            </ul>
+        </div>
+
+
+        <div>
+            <ul>
+                <p>"What is BLANK??"</p>
+                <div>
+                    <ul>
+                        <input type="radio" name="answers${answers}" value="${number}">1: "Don't you worry about BLANK"
+                        <input type="radio" name="answers${answers}" value="${number}">2: "Let me worry about BLANK"
+                        <input type="radio" name="answers${answers}" value="${number}">3: "Blank STARE"
+
+                    </ul>
+                </div>
+            </ul>
+        </div>
+
+
+        <div>
+            <ul>
+                <p>"Finish the statement-It's just..."</p>
+                <div>
+                    <ul>
+                        <input type="radio" name="answers${answers}" value="${number}"> 1: "vast nothingness"
+                        <input type="radio" name="answers${answers}" value="${number}">2: "water"
+                        <input type="radio" name="answers${answers}" value="${number}">3: "JavaScript"
+
+                    </ul>
+                </div>
+            </ul>
+        </div>
+
         <button id="start" class="btn">Start</button>
         <button id="submit" class="btn">Submit</button>
         <div id="results"> </div>
         <div id="questions"> </div>
         <div id="choices"></div>
         <div id="highscores"></div>
-        <label>
-            <input type="radio" name="question${question}" value="${number}">
 
-        </label>
     </div>
 
-    </label>
-    </div>
-    <ul>
-        <li>
-            placeholder text
-        </li>
-    </ul>
+
+
     <script src="./assets/API.js">
     </script>
 </body>
