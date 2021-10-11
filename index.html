@@ -15,78 +15,96 @@
     <header>
         <h1>Timed Coding Quiz</h1>
     </header>
-    <h2 id="timer"></h2>
-    <div class="quizContainer">
-        <div>
-            <ul>
-                <p>"What are Curly Braces"</p>
-                <div>
-                    <ul>
-                        <input type="radio" name="answers${answers}" value="${number}">1: "{ }"
-                        <input type="radio" name="answers${answers}" value="${number}">2: "[ ]"
-                        <input type="radio" name="answers${answers}" value="${number}">3: "| |"
+    <h1 id="timer"></h1>
+    <form>
+        <div class="quizContainer">
+            <div>
+                <ul>
 
-                    </ul>
-                </div>
-            </ul>
-        </div>
+                    <h3>"What are Curly Braces"</h3>
+                    <div>
+                        <ul>
+                            <input type="radio" name="answers${answers}" value="${1}">1: "{ }"<br>
+                            <input type="radio" name="answers${answers}" value="${0}">2: "[ ]"<br>
+                            <input type="radio" name="answers${answers}" value="${0}">3: "| |"<br>
 
-        <div>
-            <ul>
-                <p>"What is a Boolean?"</p>
-                <div>
-                    <ul>
-                        <input type="radio" name="answers${answers}" value="${number}">1: "A value that expresses only
-                        <input type="radio" name="answers${answers}" value="${number}">2: "A value that expresses only
-                        false"
-                        <input type="radio" name="answers${answers}" value="${number}">3: "A value that expresses truth
-                        or false value"
+                        </ul>
 
-                    </ul>
-                </div>
-            </ul>
-        </div>
+                    </div>
+                </ul>
+            </div>
 
+            <div>
+                <ul>
 
-        <div>
-            <ul>
-                <p>"What is BLANK??"</p>
-                <div>
-                    <ul>
-                        <input type="radio" name="answers${answers}" value="${number}">1: "Don't you worry about BLANK"
-                        <input type="radio" name="answers${answers}" value="${number}">2: "Let me worry about BLANK"
-                        <input type="radio" name="answers${answers}" value="${number}">3: "Blank STARE"
+                    <h3>"What is a Boolean?"</h3>
+                    <div>
+                        <ul>
+                            <input type="radio" name="answers${answers}" value="${0}">1: "A value that expresses
+                            only<br>
+                            <input type="radio" name="answers${answers}" value="${0}">2: "A value that expresses
+                            only
+                            false"<br>
+                            <input type="radio" name="answers${answers}" value="${3}">3: "A value that expresses
+                            or false value"<br>
+                        </ul>
 
-                    </ul>
-                </div>
-            </ul>
-        </div>
+                    </div>
+                </ul>
+            </div>
 
 
-        <div>
-            <ul>
-                <p>"Finish the statement-It's just..."</p>
-                <div>
-                    <ul>
-                        <input type="radio" name="answers${answers}" value="${number}"> 1: "vast nothingness"
-                        <input type="radio" name="answers${answers}" value="${number}">2: "water"
-                        <input type="radio" name="answers${answers}" value="${number}">3: "JavaScript"
+            <div>
+                <ul>
 
-                    </ul>
-                </div>
-            </ul>
-        </div>
+                    <h3>"What is BLANK??"</h3>
+                    <div>
+                        <ul>
+                            <input type="radio" name="answers${answers}" value="${0}">1: "Don't you worry about
+                            BLANK"<br>
+                            <input type="radio" name="answers${answers}" value="${2}">2: "Let me worry about BLANK"<br>
+                            <input type="radio" name="answers${answers}" value="${0}">3: "Blank STARE"<br>
 
-        <button id="start" class="btn">Start</button>
-        <button id="submit" class="btn">Submit</button>
-        <div id="results"> </div>
-        <div id="questions"> </div>
-        <div id="choices"></div>
-        <div id="highscores"></div>
+                        </ul>
 
+                    </div>
+                </ul>
+            </div>
+
+
+            <div>
+                <ul>
+
+                    <h3>"Finish the statement-It's just..."</h3>
+                    <div>
+                        <ul>
+                            <input type="radio" name="answers${answers}" value="${0}"> 1: "vast nothingness"<br>
+                            <input type="radio" name="answers${answers}" value="${0}">2: "water"<br>
+                            <input type="radio" name="answers${answers}" value="${3}">3: "JavaScript"<br>
+
+                        </ul>
+
+                    </div>
+                </ul>
+    </form>
+
+    <button id="start" class="btn">Start</button>
+    <button id="submit" class="btn">Submit</button>
+    <div id="results"> </div>
+    <div id="questions"> </div>
+    <div id="choices"></div>
+    <div id="highscores"></div>
+    <script>
+        $(document).ready(function () {
+            $('.radio').click(function () {
+                $(this).not(this).removeClass('click');
+                $(this).toggleClass("click");
+            });
+        });
+    </script>
     </div>
-
-
+    </form>
+    <p class="score">YOUR SCORE IS:<span id="highscore"></span></p>
 
     <script src="./assets/API.js">
     </script>

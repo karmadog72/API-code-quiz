@@ -69,3 +69,10 @@ header {
 }
 
 /*answer area*/
+
+/* highscore */
+.score {
+  font-style: normal;
+  font-size: 36px;
+  color: aliceblue;
+}

@@ -6,6 +6,24 @@ var questions = document.getElementById("questions");
 var choices = document.getElementById("choices");
 var highscoreInitials = document.getElementById("highscore");
 var quizContainer = document.getElementById("quiz");
+var radioBtn = document.getElementById("radio");
+var totalQuestions = $(".questions").size(4);
+var currentQuestion = 0;
+$questions = $(".questions");
+$questions.hide();
+$(questions.getAnimations(currentQuestion)).fadeIN();
+$('#nextQuestion').onclick(function ()){
+$($questions.get(currentQuestion)).fadeOut(function()
+currentQuestion = currentQuestion + 1;
+if (currentQuestion==totalQuestions) {
+  var results = sum_values()
+  alert(result);
+} else {$($questions.get(currentQuestion)).fadeIn();
+}
+};
+
+
+submitBtn.onclick = function () {
 
 function generateQuiz(
   questions,
@@ -50,7 +68,7 @@ submitBtn.onclick = function () {
 
 var myQuestions = [
   {
-    question: "What are Curly Braces",
+    question1: "What are Curly Braces",
     answers: {
       1: "{ }",
       2: "[ ]",
@@ -59,7 +77,7 @@ var myQuestions = [
     correctAnswer: "1",
   },
   {
-    question: "What is a Boolean?",
+    question2: "What is a Boolean?",
     answers: {
       1: "A value that expresses only truth",
       2: "A value that expresses only false",
@@ -69,7 +87,7 @@ var myQuestions = [
   },
 
   {
-    question: "What is BLANK??",
+    question3: "What is BLANK??",
     answers: {
       1: "Dont you worry about BLANK",
       2: "Let me worry about BLANK",
@@ -79,7 +97,7 @@ var myQuestions = [
   },
 
   {
-    question: "Finish the statement-It's just...",
+    question4: "Finish the statement-It's just...",
     answers: {
       1: "vast nothingness",
       2: "water",
