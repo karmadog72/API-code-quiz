@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Timed Coding Quiz</title>
     <link rel="stylesheet" href="./assets/style.css" />
+
 </head>
 <!-- the main question section -->
 
@@ -16,25 +17,20 @@
         <h1>Timed Coding Quiz</h1>
     </header>
     <h1 id="timer"></h1>
-    <form>
+    <div class="quizContainer">
         <div class="quizContainer">
             <div>
-                <ul>
+                <h3 id="questionHere"></h3>
+                <div>
 
-                    <h3>"What are Curly Braces"</h3>
-                    <div>
-                        <ul>
-                            <input type="radio" name="answers${answers}" value="${1}">1: "{ }"<br>
-                            <input type="radio" name="answers${answers}" value="${0}">2: "[ ]"<br>
-                            <input type="radio" name="answers${answers}" value="${0}">3: "| |"<br>
+                    <button type="text" id="1"></button>
+                    <button type="text" id="2"></button>
+                    <button type="text" id="3"></button>
 
-                        </ul>
-
-                    </div>
-                </ul>
+                </div>
             </div>
 
-            <div>
+            <!--   <div>
                 <ul>
 
                     <h3>"What is a Boolean?"</h3>
@@ -86,14 +82,20 @@
 
                     </div>
                 </ul>
-    </form>
+    </form> -->
+        </div>
+        <button id="start" class="btn">Start</button>
+        <button id="submit" class="btn">Submit</button>
+        <div id="results"> </div>
+        <div id="questions"> </div>
+        <div id="choices"></div>
+        <div id="highscores"></div>
 
-    <button id="start" class="btn">Start</button>
-    <button id="submit" class="btn">Submit</button>
-    <div id="results"> </div>
-    <div id="questions"> </div>
-    <div id="choices"></div>
-    <div id="highscores"></div>
+    </div>
+    </form>
+    <p class="score">YOUR SCORE IS:<span id="highscore"></span></p>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
             $('.radio').click(function () {
@@ -102,10 +104,6 @@
             });
         });
     </script>
-    </div>
-    </form>
-    <p class="score">YOUR SCORE IS:<span id="highscore"></span></p>
-
     <script src="./assets/API.js">
     </script>
 </body>
